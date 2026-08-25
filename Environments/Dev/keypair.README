@@ -1,1 +1,3 @@
+# Follow the below commanline to get .pem file to access EC2
+
 aws ssm get-parameter --name "/myexample/dev/myexample-dev-keypair" --with-decryption --query Parameter.Value --output text | Out-File -Encoding ascii myexample-dev-keypair.pem
