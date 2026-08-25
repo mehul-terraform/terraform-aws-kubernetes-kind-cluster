@@ -1,0 +1,1 @@
+aws ssm get-parameter --name "/myexample/dev/myexample-dev-keypair" --with-decryption --query Parameter.Value --output text | Out-File -Encoding ascii myexample-dev-keypair.pem
