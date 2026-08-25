@@ -47,17 +47,7 @@ security_groups = {
       { from_port = 0, to_port = 0, protocol = "-1", cidr_blocks = ["0.0.0.0/0"] }
     ]
     tags = { Role = "web-sg" }
-  }
-  db = {
-    vpc_id = ""
-    ingress_rules = [
-      { from_port = 3306, to_port = 3306, protocol = "tcp", cidr_blocks = ["10.0.0.0/16"] }
-    ]
-    egress_rules = [
-      { from_port = 0, to_port = 0, protocol = "-1", cidr_blocks = ["0.0.0.0/0"] }
-    ]
-    tags = { Role = "db-sg" }
-  }
+  } 
 }
 
 #--------------------------------------------------------------------------------------------------
@@ -82,16 +72,7 @@ instances = {
     key_name           = "" # dynamically resolved to keypair module
     user_data          = "userdata.sh"
     tags               = { Role = "web", Tier = "public" }
-  }
-  api = {
-    ami_id             = "ami-0e5497a77ef21b5ac"
-    instance_type      = "t3.micro"
-    subnet_id          = ""
-    security_group_ids = []
-    key_name           = ""
-    user_data          = ""
-    tags               = { Role = "api", Tier = "private" }
-  }
+  } 
 }
 
 #--------------------------------------------------------------------------------------------------
