@@ -6,12 +6,12 @@ exec > >(tee -a /var/log/user-data.log | logger -t user-data -s 2>/dev/console) 
 
 export DEBIAN_FRONTEND=noninteractive
 
-# Update package index and install Nginx
-apt-get update -y
-apt-get install -y nginx
+# # Update package index and install Nginx
+# apt-get update -y
+# apt-get install -y nginx
 
-systemctl enable nginx
-systemctl start nginx
+# systemctl enable nginx
+# systemctl start nginx
 
 # Install Docker
 apt-get update -y
