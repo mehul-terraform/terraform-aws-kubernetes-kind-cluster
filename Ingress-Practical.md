@@ -28,6 +28,7 @@ kind version
 
 # Step 4. Install kubectl
 sudo snap install kubectl --classic
+
 kubectl version --client
 
 # Step 5. Create a 3-node cluster configuration
