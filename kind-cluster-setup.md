@@ -1,6 +1,6 @@
 # Create Kind Cluster
 
-# Step 1. Install prerequisites
+# Step 1. Install Prerequisites
 sudo apt update
 
 sudo apt upgrade -y
