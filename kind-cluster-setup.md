@@ -77,3 +77,9 @@ kubectl create deployment nginx --image=nginx
 kubectl scale deployment nginx --replicas=3
 
 kubectl expose deployment nginx --port=80 --type=NodePort
+
+kubectl get deployments
+
+kubectl get pods
+
+kubectl get services
