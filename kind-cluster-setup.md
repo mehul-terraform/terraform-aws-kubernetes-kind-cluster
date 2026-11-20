@@ -101,4 +101,6 @@ ps aux | grep '[k]ubectl port-forward'
 
 tail -f port-forward.log
 
+pgrep -af 'kubectl port-forward'
+
 kill [PID]
