@@ -2,19 +2,24 @@
 
 # Step 1. Install prerequisites
 sudo apt update
+
 sudo apt upgrade -y
 
 sudo apt install -y curl wget apt-transport-https ca-certificates
 
 # Step 2. Install Docker
 sudo apt install -y docker.io
+
 sudo systemctl enable docker
+
 sudo systemctl start docker
 
 sudo usermod -aG docker $USER
 
 newgrp docker
+
 docker ps
+
 docker version
 
 # Step 3. Download & Install KIND
@@ -36,20 +41,28 @@ kubectl version --client
 # 1) vi kind-cluster.yaml
 
 kind: Cluster
+
 apiVersion: kind.x-k8s.io/v1alpha4
 
 nodes:
   - role: control-plane
+  - 
     extraPortMappings:
+    
       - containerPort: 80
+      - 
         hostPort: 80
+        
         protocol: TCP
 
       - containerPort: 443
+      - 
         hostPort: 443
+        
         protocol: TCP
 
   - role: worker
+  - 
   - role: worker
 
 # 2) kind create cluster --name dev-cluster --config kind-cluster.yaml
@@ -81,9 +94,11 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 
 metadata:
+
   name: my-ingress
   
 spec:
+
   ingressClassName: nginx
   
   rules:
