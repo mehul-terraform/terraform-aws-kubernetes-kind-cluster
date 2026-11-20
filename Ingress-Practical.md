@@ -113,6 +113,7 @@ spec:
 # 5. sudo vi /etc/hosts
 
 127.0.0.1 app1.local
+
 127.0.0.1 app2.local
 
 # 6. Access applications
