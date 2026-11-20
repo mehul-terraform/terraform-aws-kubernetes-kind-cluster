@@ -120,10 +120,6 @@ spec:
 
 # 6. Access applications
                   
+http://app1.local/
 
-
-
-
-
-
-
+http://app2.local/
