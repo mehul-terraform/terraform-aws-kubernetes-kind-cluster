@@ -69,3 +69,11 @@ nodes:
 
 # 2) Create Cluster
 kind create cluster --name dev-cluster --config kind-cluster.yaml
+
+# 3) Create Pod, Deployment and Services
+
+kubectl create deployment nginx --image=nginx
+
+kubectl scale deployment nginx --replicas=3
+
+kubectl expose deployment nginx --port=80 --type=NodePort
