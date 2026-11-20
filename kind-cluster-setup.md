@@ -38,6 +38,7 @@ kubectl version --client
 
 # Step 5. Create a 3-node cluster configuration
 
+# Create kind-cluster.yaml file
 vi kind-cluster.yaml
 
 kind: Cluster
@@ -66,4 +67,5 @@ nodes:
     
   - role: worker
 
+# Create Cluster
 kind create cluster --name dev-cluster --config kind-cluster.yaml
