@@ -88,11 +88,11 @@ kubectl get nodes -o wide
 
 # Access Container
 
-# Access from cluster from node ip
+# 1) Access from cluster from node ip
 curl http://[NODE-IP]:[PORT]
 
-# (Access From Root Host/Windows Machine)
+# 2) (Access From Root Host/Windows Machine)
 kubectl port-forward svc/{servicename} 8080:80 
 
-# (Run in background)
+# 3) (Run in background)
 nohup kubectl port-forward svc/nginx 8080:80 > port-forward.log 2>&1 & & 
