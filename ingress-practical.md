@@ -62,6 +62,8 @@ spec:
 
 kubectl apply -f ingress.yaml
 
+kubectl get ing
+
 # 5. Configure Host File
 
 sudo vi /etc/hosts
