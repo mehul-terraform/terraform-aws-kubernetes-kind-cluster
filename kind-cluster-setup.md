@@ -99,4 +99,6 @@ nohup kubectl port-forward svc/nginx 8080:80 > port-forward.log 2>&1 & &
 
 ps aux | grep '[k]ubectl port-forward'
 
-kill <PID>
+tail -f port-forward.log
+
+kill [PID]
