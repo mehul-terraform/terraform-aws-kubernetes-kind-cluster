@@ -91,8 +91,12 @@ kubectl get nodes -o wide
 
 curl http://[NODE-IP]:[PORT]
 
-# 2) (Access From Root Host/Windows Machine)
+# 2) Access From Root Host/Windows Machine
 kubectl port-forward svc/{servicename} 8080:80 
 
-# 3) (Run in background)
+# 3) Run in background
 nohup kubectl port-forward svc/nginx 8080:80 > port-forward.log 2>&1 & & 
+
+ps aux | grep '[k]ubectl port-forward'
+
+kill <PID>
