@@ -60,6 +60,8 @@ nodes:
 
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 
+kubectl get pods -n ingress-nginx -o wide
+
 # 2. Create different application services
 
 kubectl create deployment app1 --image=nginx
