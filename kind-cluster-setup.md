@@ -98,7 +98,7 @@ kubectl port-forward svc/{servicename} 8080:80
 
 http://localhost:8080
 
-# 3) Run in background
+# 3) Run In Background
 nohup kubectl port-forward svc/nginx 8080:80 > port-forward.log 2>&1 &
 
 ps aux | grep '[k]ubectl port-forward'
