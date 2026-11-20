@@ -80,9 +80,12 @@ kind: Ingress
 
 metadata:
   name: my-ingress
+  
 spec:
   ingressClassName: nginx
+  
   rules:
+  
     - host: app1.local
       http:
         paths:
