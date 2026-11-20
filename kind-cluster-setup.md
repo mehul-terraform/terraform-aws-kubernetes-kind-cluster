@@ -87,3 +87,5 @@ kubectl get services
 kubectl get nodes -o wide
 
 curl http://<NODE-IP>:<PORT>
+
+kubectl port-forward svc/nginx-service 8080:80 (Access From Root Host/Windows Machine)
