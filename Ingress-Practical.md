@@ -17,11 +17,10 @@ newgrp docker
 docker ps
 docker version
 
-# Step 3. Install KIND
+# Step 3. Download & Install KIND
 curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.33.0/kind-linux-amd64
 chmod +x ./kind
 sudo mv ./kind /usr/local/bin/kind
-
 kind version
 
 # Step 4. Install kubectl
