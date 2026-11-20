@@ -18,7 +18,9 @@ kubectl expose deployment app1 --port=80
 
 kubectl expose deployment app2 --port=80
 
-# 3. vi ingress.yaml
+# 3. Create ingress.yaml
+
+vi ingress.yaml
 
 apiVersion: networking.k8s.io/v1
 
@@ -60,7 +62,9 @@ spec:
 
 kubectl apply -f ingress.yaml
 
-# 5. sudo vi /etc/hosts
+# 5. Configure Host file
+
+sudo vi /etc/hosts
 
 127.0.0.1 app1.local
 
