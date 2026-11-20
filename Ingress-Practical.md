@@ -63,11 +63,13 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main
 # 2. Create different application services
 
 kubectl create deployment app1 --image=nginx
+
 kubectl create deployment app2 --image=httpd
 
 # 2. Create ClusterIP services
 
 kubectl expose deployment app1 --port=80
+
 kubectl expose deployment app2 --port=80
 
 # 3. vi ingress.yaml
