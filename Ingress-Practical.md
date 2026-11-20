@@ -30,7 +30,7 @@ kubectl version --client
 
 # Step 5. Create a 3-node cluster configuration
 
-1) vi kind-cluster.yaml
+# 1) vi kind-cluster.yaml
 
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
@@ -49,7 +49,7 @@ nodes:
   - role: worker
   - role: worker
 
-2) kind create cluster --name dev-cluster --config kind-cluster.yaml
+# 2) kind create cluster --name dev-cluster --config kind-cluster.yaml
 
 # Practical
 
