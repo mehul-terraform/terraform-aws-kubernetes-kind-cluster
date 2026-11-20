@@ -88,7 +88,7 @@ kubectl get nodes -o wide
 
 # Access Container
 
-# 1) Access from cluster from node ip
+# 1) Access from cluster's node ip
 curl http://[NODE-IP]:[PORT]
 
 # 2) (Access From Root Host/Windows Machine)
