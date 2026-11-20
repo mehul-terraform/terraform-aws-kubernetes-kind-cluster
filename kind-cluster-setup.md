@@ -87,12 +87,16 @@ kubectl get services
 # Access Container
 
 # 1) Access from cluster's node ip
-kubectl get nodes -o wide
+kubectl get nodes -o wide ( To Check Node IP)
+
+kubectl get svc -o wide ( To Check NodePort Of Service)
 
 curl http://[NODE-IP]:[PORT]
 
 # 2) Access From Root Host/Windows Machine
 kubectl port-forward svc/{servicename} 8080:80 
+
+http://localhost:8080
 
 # 3) Run in background
 nohup kubectl port-forward svc/nginx 8080:80 > port-forward.log 2>&1 &
@@ -101,6 +105,12 @@ ps aux | grep '[k]ubectl port-forward'
 
 tail -f port-forward.log
 
+http://localhost:8080
+
+# 4) Stop Services
+
 pgrep -af 'kubectl port-forward'
 
 kill [PID]
+
+http://localhost:8080
