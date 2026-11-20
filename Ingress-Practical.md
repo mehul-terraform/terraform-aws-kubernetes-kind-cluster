@@ -75,7 +75,9 @@ kubectl expose deployment app2 --port=80
 # 3. vi ingress.yaml
 
 apiVersion: networking.k8s.io/v1
+
 kind: Ingress
+
 metadata:
   name: my-ingress
 spec:
