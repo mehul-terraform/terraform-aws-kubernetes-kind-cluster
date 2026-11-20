@@ -56,7 +56,9 @@ spec:
                 port:
                   number: 80
 
-# 4. kubectl apply -f ingress.yaml
+# 4. Create Ingress
+
+kubectl apply -f ingress.yaml
 
 # 5. sudo vi /etc/hosts
 
