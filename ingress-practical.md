@@ -12,13 +12,13 @@ kubectl create deployment app1 --image=nginx
 
 kubectl create deployment app2 --image=httpd
 
-# 2. Create ClusterIP services
+# 3. Create ClusterIP services
 
 kubectl expose deployment app1 --port=80
 
 kubectl expose deployment app2 --port=80
 
-# 3. Create ingress.yaml
+# 4. Create ingress.yaml
 
 vi ingress.yaml
 
@@ -58,13 +58,13 @@ spec:
                 port:
                   number: 80
 
-# 4. Create Ingress
+# 5. Create Ingress
 
 kubectl apply -f ingress.yaml
 
 kubectl get ing
 
-# 5. Configure Host File
+# 6. Configure Host File
 
 sudo vi /etc/hosts
 
@@ -72,7 +72,7 @@ sudo vi /etc/hosts
 
 127.0.0.1 app2.local
 
-# 6. Access applications
+# 7. Access applications
                   
 http://app1.local/
 
